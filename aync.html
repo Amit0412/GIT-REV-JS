@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="df"></p>
+    <script>
+        async function sy()
+        {
+            return "hello";
+        }
+        sy().then(
+        
+            function(response)
+            {
+              mydisplay(response);  
+            }
+        )
+        function mydisplay(value)
+        {
+            document.getElementById("df").innerHTML=value;
+        }
+        sy()
+        //try
+        //{
+          //  console.log("THIS IS FOR TRY");
+            //gh();
+        //}
+        //catch(error)
+        //{
+          //  console.log("error aaega")
+            //console.log(error.name);
+            //console.log(error)
+            //console.log(error.message);
+        //}
+        //finally
+        //{
+           // console.log("this is end")
+        //}
+
+        let red=/harry/g
+        let s="My name is and harry";
+        
+        let result=red.exec(s)
+        console.log(result)
+        console.log(result.index)
+        //let resul=red.exec(s)
+        //console.log(resul)
+
+        let df=s.match(red)
+        console.log(df)
+
+        let es=s.search(red)
+        console.log(es)
+
+        let v=s.replace(red,"AMIT")
+        console.log(v)
+
+
+
+
+        let ds=/ar*/g
+        let str="hbb hart"
+        let resu=ds.exec(str)
+        console.log(resu)
+
+        let sumit=/ha[r-z][r-u]y b[a-i]ai [1-9]/i
+        let amit="harry bhai 9"
+        let rg=sumit.exec(amit)
+        console.log(rg)
+
+        const myar=["apple","orange"]
+        console.log("My array is",myar)
+
+        let rt=red.test(s)
+        console.log(rt)
+    </script>
+</body>
+</html>

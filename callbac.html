@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ss"></p>
+    <p id="dd"></p>
+    <script>
+        function display(result)
+        {
+            document.getElementById("ss").innerHTML=result;
+        }
+        function add()
+        {
+            var d=3;
+            display(d);
+        }
+        function sub()
+        {
+            var e=4;
+            display(e);
+        }
+        add();
+        sub();
+
+        function cal(num1,num2)
+        {
+            var res=num1+num2;
+            return res;
+        }
+        function dis(i)
+        {
+            document.getElementById("ss").innerHTML=i;
+        }
+        let z=cal(5,9);
+        dis(z)
+
+        let myprom=new Promise((resolve,reject)=>{
+        let a=3;
+        if(a==3)
+        {
+            resolve("PROMISE SUCCESS")
+        }
+        else
+        {
+            reject("promise failed")
+        }
+        })
+
+        myprom.then((response)=>
+        {
+            console.log(`th code is ${response}`);
+        })
+        
+        function getdta()
+        {
+            let url="harry.txt";
+            fetch(url).then((response)=>
+            {
+                return response.text()
+            }).then((data)=>
+            {
+                console.log(data)
+            })
+        }
+        getdta()
+
+        async function he()
+        {
+            return "hello"
+        }
+        let r=he();
+        console.log(r)
+    </script>
+</body>
+</html>
