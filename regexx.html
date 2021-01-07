@@ -20,8 +20,22 @@
         let c=str.match(m)
         console.log(c)
         let d=str.search(m)
-        console.log(d)
-        
+        console.log(d);
+
+        function*nextgen()
+        {
+            let i=0;
+            yield 1;
+            yield 2;
+            yield 3;
+            yield 4;
+        }
+        let r=nextgen()
+        console.log(r.next())
+        console.log(r.next())
+        console.log(r.next())
+        console.log(r.next())
+        console.log(r.next())
         </script>
 </body>
 </html>
