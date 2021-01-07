@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //DECLARE MAP
+
+        let rm=new Map()
+        const key1="mystr";
+        const key2="{}";
+        rm.set(key1,"SAMPLE STRING")
+        rm.set(key2,"EMPTY")
+        console.log(rm)
+        console.log(rm.size)
+        console.log(rm.get(key1))
+
+        //PRINT KEY,VALUE USING FOR OF LOOP.
+
+        for(let [key,value] of rm)
+        {
+            console.log(key,value)
+        }
+
+        for(let key of rm.keys())
+        {
+            console.log(key)
+        }
+        for(let value of rm.values())
+        {
+            console.log(value)
+        }
+        //CONVERTING MAP INTO ARRAY
+
+        let bm=Array.from(rm)
+        console.log(bm)
+
+        let cm=Array.from(rm.keys())
+        console.log(cm)
+
+        let dm=Array.from(rm.values())
+        console.log(dm)
+    </script>
+</body>
+</html>

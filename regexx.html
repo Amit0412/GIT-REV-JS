@@ -77,6 +77,45 @@
         {
             console.log(name)
         }
+
+
+        function*op()
+        {
+            let j=0;
+            yield 1;
+            yield 2;
+            yield 3;
+        }
+        let ry=op();
+        console.log(ry.next())
+        console.log(ry.next())
+        let rc=new Map();
+        const key3="mystr"
+        const key4={};
+
+        rc.set(key3,"this")
+        rc.set(key4,"this is it")
+        console.log(rc)
+
+
+
+        //MAP OF JS
+
+        let am=new Map()
+        const key5="mystr";
+        const key6={};
+
+        am.set(key5,"sample 1")
+        am.set(key6,"sample 2")
+        console.log(am)
+        console.log(am.size)
+        console.log(am.get(key5))
+
+        for (let key of am.keys()) {
+            console.log(key)
+            
+        }
+
         </script>
 </body>
 </html>
