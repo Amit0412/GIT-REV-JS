@@ -36,6 +36,47 @@
         console.log(r.next())
         console.log(r.next())
         console.log(r.next())
+
+        let arra=[1,2,3,4]
+        for (let index = 0; index < arra.length; index++) {
+            const element = arra[index];
+            console.log(element)
+        }
+
+        let obj={name:"amit"}
+        console.log(obj) 
+        
+
+        let stre="this is bunny"
+        for (let index = 0; index < stre.length; index++) {
+            const element = stre[index];
+            console.log(element)
+        }
+
+        
+        let mrt={name:"amit"}
+        for (let key in mrt)
+        {
+            console.log(mrt[key])
+        }
+
+
+        let mymap=new Map()
+        const key1="mystr";
+        const key2={}
+
+        mymap.set(key1,"sample")
+        mymap.set(key2,"another sample")
+
+        console.log(mymap)
+        console.log(mymap.get(key2))
+        console.log(mymap.size)
+
+        let muy=[1,2,3,4]
+        for (let name of muy)
+        {
+            console.log(name)
+        }
         </script>
 </body>
 </html>
