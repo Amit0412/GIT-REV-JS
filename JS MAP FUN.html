@@ -7,42 +7,52 @@
 </head>
 <body>
     <script>
-        //DECLARE MAP
-
-        let rm=new Map()
-        const key1="mystr";
-        const key2="{}";
-        rm.set(key1,"SAMPLE STRING")
-        rm.set(key2,"EMPTY")
-        console.log(rm)
-        console.log(rm.size)
-        console.log(rm.get(key1))
-
-        //PRINT KEY,VALUE USING FOR OF LOOP.
-
-        for(let [key,value] of rm)
+        //topic 1 generators
+        function*op()
         {
-            console.log(key,value)
+            let i=0;
+            yield 1;
+            yield 2
         }
-
-        for(let key of rm.keys())
+        let r=op()
+        console.log(r.next())
+        //TOPIC 2 MAPS
+        let a=new Map()
+        const key1="mystr";
+        const key2={}
+        a.set(key1,"One")
+        a.set(key2,"Second")
+        console.log(a)
+        console.log(a.size)
+        for(let key of a.keys())
         {
             console.log(key)
         }
-        for(let value of rm.values())
+        for(let value of a.values())
         {
             console.log(value)
         }
-        //CONVERTING MAP INTO ARRAY
+        console.log(a.get(key1))
+        //TOPIC 3 SETS
+        let re=new Set()
+        re.add(34)
+        re.add(45)
+        re.add(46)
+        console.log(re)
 
-        let bm=Array.from(rm)
-        console.log(bm)
+        for (let c of re) {
+            console.log(c)
+            
+        }
+        console.log(re.has(45))
+        //TOPIC 4 SYMBOL
 
-        let cm=Array.from(rm.keys())
-        console.log(cm)
-
-        let dm=Array.from(rm.values())
-        console.log(dm)
+        const n1=Symbol()
+        const n2=Symbol()
+        let myob={}
+        myob[n1]="this"
+        myob[n2]="sample"
+        console.log(myob)
     </script>
 </body>
 </html>
