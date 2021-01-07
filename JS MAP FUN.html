@@ -6,53 +6,33 @@
     <title>Document</title>
 </head>
 <body>
+    
     <script>
-        //topic 1 generators
-        function*op()
-        {
-            let i=0;
-            yield 1;
-            yield 2
-        }
-        let r=op()
-        console.log(r.next())
-        //TOPIC 2 MAPS
-        let a=new Map()
-        const key1="mystr";
-        const key2={}
-        a.set(key1,"One")
-        a.set(key2,"Second")
-        console.log(a)
-        console.log(a.size)
-        for(let key of a.keys())
-        {
-            console.log(key)
-        }
-        for(let value of a.values())
-        {
-            console.log(value)
-        }
-        console.log(a.get(key1))
-        //TOPIC 3 SETS
-        let re=new Set()
-        re.add(34)
-        re.add(45)
-        re.add(46)
-        console.log(re)
+        
+            let ne=new Map()
+            const key1="mystr"
+            const key2={}
+            ne.set(key1,"sample")
+            ne.set(key2,"cdc")
+            console.log(ne)
 
-        for (let c of re) {
-            console.log(c)
             
-        }
-        console.log(re.has(45))
-        //TOPIC 4 SYMBOL
+            let arra=["1","2"]
+            let a,b;
+            [a,b]=arra;
+            console.log(a,b)
 
-        const n1=Symbol()
-        const n2=Symbol()
-        let myob={}
-        myob[n1]="this"
-        myob[n2]="sample"
-        console.log(myob)
+            function*io()
+            {
+                let i=0;
+                yield 1;
+                yield 2
+            }
+            let rc=io()
+            console.log(rc.next())
+            console.log(rc.next())
+            console.log(rc.next())
+        
     </script>
 </body>
 </html>
